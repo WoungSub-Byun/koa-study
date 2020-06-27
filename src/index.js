@@ -11,7 +11,7 @@ const bodyParser = require('koa-bodyparser');
 mongoose.Promise = global.Promise; //노드 자체 Promise사용 설정
 //mongoDB 연결
 mongoose.connect(process.env.MONGO_URI, {
-    useMongoClient: true
+    useNewUrlParser: true
 }).then(
     (res)=>{
         console.log('Successfully connected to mongodb');
